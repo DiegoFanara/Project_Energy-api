@@ -19,16 +19,16 @@ export class BuildingsController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.buildingsService.findOne(+id);
+    return this.buildingsService.findOne(id);
   }
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateBuildingDto: UpdateBuildingDto) {
-    return this.buildingsService.update(+id, updateBuildingDto);
+    return this.buildingsService.update(id, updateBuildingDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.buildingsService.remove(+id);
+    return this.buildingsService.remove(id);
   }
 }
