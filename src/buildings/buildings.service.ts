@@ -38,7 +38,7 @@ export class BuildingsService {
     
     console.log(id, updateBuildingDto)
     Object.assign(building, updateBuildingDto);
-    building.updatedAt = new Date().toISOString();
+    building.updatedAt = new Date();
 
     return building;
   }
